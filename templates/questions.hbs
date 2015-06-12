@@ -2,7 +2,7 @@
 
 <ul>
   {{#each question in model}}
-    <li>{{#link-to 'question' queston}}{{question.title}}{{/link-to}}<ul>{{question.author}}, {{question.date}}</ul></li>
+    <li>{{#link-to 'question' question}}{{question.title}}{{/link-to}}<ul>{{question.author}}, {{question.date}}</ul></li>
   {{/each}}
 </ul>
 

@@ -3,10 +3,13 @@
 <div class="form-group">
   <form {{action 'save' on='submit'}}>
     <p>
-      {{input id="question-title" class="form-control" type="text" valueBinding="title" placeholder="Enter a title for your question"}}
+      {{input id="question-author" class="form-control" type="text" valueBinding="author" placeholder="Enter your name"}}
     </p>
     <p>
-      {{textarea rows="4" id="question-body" class="form-control" type="text" valueBinding="body" placeholder="Enter your question"}}
+      {{input id="question-title" class="form-control" type="text" valueBinding="title" placeholder="Enter your question"}}
+    </p>
+    <p>
+      {{textarea rows="4" id="question-body" class="form-control" type="text" valueBinding="body" placeholder="Enter your question description"}}
     </p>
     <p>
       {{input id="question-date" class="form-control" type="date" valueBinding="date" placeholder="Enter the Date"}}

@@ -4,6 +4,7 @@ App.NewQuestionController = Ember.Controller.extend({
       var newQuestion = this.store.createRecord('question', {
         title: this.get('title'),
         body: this.get('body'),
+        author: this.get('author'),
         date: this.get('date')
       });
       newQuestion.save();
@@ -11,6 +12,7 @@ App.NewQuestionController = Ember.Controller.extend({
 
       this.set('title', null),
       this.set('body', null),
+      this.set('author', null),
       this.set('date', null)
     }
   }

@@ -3,5 +3,5 @@ App.Question = DS.Model.extend({
   body: DS.attr(),
   author: DS.attr(),
   date: DS.attr(),
-  // answers: DS.hasMany('answer', {async: true})
+  answers: DS.hasMany('answer', {async: true})
 });

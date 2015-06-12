@@ -16,22 +16,25 @@
   </form>
 {{else}}
   <p>{{body}}</p>
-  <ul>{{author}}, {{date}}</ul>
-
-  <button class="btn btn-sm btn-primary" {{action 'edit'}}>Edit</button>
-
-  <button class="btn btn-sm btn-danger" {{action 'delete'}}>delete</button>
+  <ul>
+    {{author}}, {{date}}
+    <button class="btn btn-xs btn-primary" {{action 'edit'}}>Edit</button>
+    <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
+  </ul>
 {{/if}}
 
 {{outlet}}
 
-<h2>Answers</h2>
+<br>
 
-{{#each answer in answers itemController="answer"}}
-  <p>
-    {{answer.text}}
+<h2>Answers:</h2>
+
+{{#each answer in model.answers}}
+  <p>{{answer.description}}</p>
+  <ul>
+    {{answer.name}}, {{answer.date}}
     <button class="btn btn-xs btn-danger" {{action 'delete'}}>delete</button>
-  </p>
+  </ul>
 {{/each}}
 
-<p>{{#link-to 'new-answer' this class="btn btn-success"}}New answer{{/link-to}}</p>
+<p>{{#link-to 'new-answer' this class="btn btn-success"}}Answer{{/link-to}}</p>

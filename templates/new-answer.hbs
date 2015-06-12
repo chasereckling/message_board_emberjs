@@ -3,7 +3,9 @@
 <form>
   <div class="form-group">
     <label for="text">Your answer:</label>
-    {{textarea value=text id="text" class="form-control" rows="5"}}
+    {{input id="name" class="form-control" type="text" valueBinding="name" placeholder="Enter your name"}}
+    {{textarea valueBinding="description" id="description" class="form-control" rows="3" placeholder="Enter your answer"}}
+    {{input id="date" class="date" type="date" valueBinding="date" size="5" placeholder="Enter the Date"}}
   </div>
 
   <button class="btn btn-primary" {{action "save"}}>Add answer</button>

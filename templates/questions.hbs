@@ -1,0 +1,9 @@
+<h1>Message Board</h1>
+
+<ul>
+  {{#each question in model}}
+    <li>{{#link-to 'question' queston}}{{question.title}}{{/link-to}}</li>
+  {{/each}}
+</ul>
+
+{{#link-to 'new-question' classNames="btn btn-primary"}}Add question{{/link-to}}

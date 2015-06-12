@@ -16,12 +16,15 @@
   </form>
 {{else}}
   <p>{{body}}</p>
+  <ul>{{author}}, {{date}}</ul>
 
-  <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+  <button class="btn btn-sm btn-primary" {{action 'edit'}}>Edit</button>
+
+  <button class="btn btn-sm btn-danger" {{action 'delete'}}>delete</button>
 {{/if}}
 
 {{outlet}}
-<!-- 
+<!--
 <h2>Comments</h2>
 
 {{#each comment in comments itemController="comment"}}
